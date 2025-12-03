@@ -66,6 +66,25 @@ kubectl apply -f infra/k8s/
 3. Run Workflow
 python3 app/workflow-orchestrator/orchestrator.py
 
+🎉 This full system is now Helm-deployable!
+
+🚀 How to Deploy Using Helm
+
+From the root of your project:
+
+1. Install Helm (if not installed)
+sudo apt install helm
+
+2. Deploy the entire project
+helm install agentic-ai ./helm/agentic-ai
+
+3. Upgrade changes
+helm upgrade agentic-ai ./helm/agentic-ai
+
+4. Uninstall
+helm uninstall agentic-ai
+
+
 🧩 Next Steps (Extension Ideas)
 
 Add multiple AI agents

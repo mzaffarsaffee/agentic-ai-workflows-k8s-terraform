@@ -1,0 +1,11 @@
+namespace: agentic-ai
+
+agent:
+  image: "agent-service:latest"
+  replicas: 1
+  port: 8080
+
+orchestrator:
+  image: "workflow-orchestrator:latest"
+  replicas: 1
+

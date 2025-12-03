@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: workflow-orchestrator
+  namespace: {{ .Values.namespace }}
+
+spec:
+  replicas: {{ .Values.orchestrator.replicas }}
+  selector:
+    matchLabels:
+      app: workflow-orchestrator
+
+  template:
+    metadata:
+      labels:
+        app: workflow-orchestrator
+
+    spec:
+      containers:
+        - name: orchestrator
+          image: {{ .Values.orchestrator.image }}
+
